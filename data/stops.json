@@ -1,0 +1,146 @@
+{
+  "taller": {
+    "titulo": "Fototour: Derivas Fotográficas",
+    "subtitulo": "Creación de archivo fotográfico en Monterrey",
+    "fecha": "2026-05-02",
+    "horario": "9:00 - 13:00",
+    "vinculo_exposicion": "¿Cómo salimos? — Teresa Margolles, MARCO",
+    "imparten": ["Tania Martínez Báez", "Ricardo Burnes"],
+    "ruta": "Ruta 2"
+  },
+  "actos": [
+    {
+      "numero": 1,
+      "titulo": "El Olvido",
+      "descripcion": "Cines transformados o abandonados cuya fachada permanece pero cuya función ha sido reemplazada o suspendida. Lo que queda en pie es la cara del edificio; lo que se perdió es el cuerpo que la habitaba.",
+      "stops": ["encanto", "alameda", "montoya", "cine_monterrey"]
+    },
+    {
+      "numero": 2,
+      "titulo": "La Destrucción",
+      "descripcion": "El espacio donde dos cines fueron borrados completamente del paisaje urbano. Aquí no hay fachada que registrar; hay una ausencia que documentar.",
+      "stops": ["macroplaza"]
+    },
+    {
+      "numero": 3,
+      "titulo": "La Reinterpretación",
+      "descripcion": "El museo donde los restos del recorrido encuentran un nuevo significado. La pieza 'La ilusión' (2025) recoge el letrero del Antiguo Cine Monterrey y lo convierte en obra. Cierre del fototour: lo que vimos caer, abandonado o borrado, regresa transformado.",
+      "stops": ["marco"]
+    }
+  ],
+  "stops": [
+    {
+      "id": "encanto",
+      "orden_global": 1,
+      "acto": 1,
+      "nombre": "Cine Encanto",
+      "por_que_paramos": "[POR LLENAR — texto del facilitador, ~60-80 palabras]",
+      "descripcion_corta": "Cine emblemático de los años 80 con marquesina espectacular. Conocido por las leyendas urbanas de las 'Conchitas Encanto'.",
+      "ano_fundacion": "1942 (inaugurado el 4 de diciembre)",
+      "ano_abandono": "1980 (cierre) / 1990 (uso como bodega)",
+      "estado_actual": "Fachada con letras originales aún visibles. Edificio abandonado.",
+      "direccion": "Julián Villagrán esq. Isaac Garza, Centro, Monterrey",
+      "coords": { "lat": 25.6815, "lng": -100.3223 },
+      "categoria_conceptual": "Restos en pie",
+      "imagenes": [
+        { "src": "assets/images/encanto/01.jpg", "alt": "Fachada Cine Encanto, vista frontal", "credit": "" },
+        { "src": "assets/images/encanto/02.jpg", "alt": "Detalle del letrero residual", "credit": "" }
+      ],
+      "testimonio_archivo": "[POR LLENAR — guión a partir de archivo]"
+    },
+    {
+      "id": "alameda",
+      "orden_global": 2,
+      "acto": 1,
+      "nombre": "Cine Alameda",
+      "por_que_paramos": "[POR LLENAR]",
+      "descripcion_corta": "Cine que conforma con el Encanto una pareja de fachadas sobre Villagrán, a menos de una cuadra una de la otra.",
+      "ano_fundacion": "1937",
+      "ano_abandono": "Por verificar",
+      "estado_actual": "Queda solo la fachada.",
+      "direccion": "Julián Villagrán 515 nte., Centro, Monterrey",
+      "coords": { "lat": 25.6811, "lng": -100.3222 },
+      "categoria_conceptual": "Restos en pie",
+      "imagenes": [
+        { "src": "assets/images/alameda/01.jpg", "alt": "Fachada Cine Alameda", "credit": "" }
+      ],
+      "testimonio_archivo": "[POR LLENAR]"
+    },
+    {
+      "id": "montoya",
+      "orden_global": 3,
+      "acto": 1,
+      "nombre": "Cine Montoya",
+      "por_que_paramos": "[POR LLENAR]",
+      "descripcion_corta": "Primer cine en Monterrey con funciones en formato 70mm. La modernización tecnológica no salvó al edificio.",
+      "ano_fundacion": "1963",
+      "ano_abandono": "Cerrado al público en 1992",
+      "estado_actual": "Queda la fachada.",
+      "direccion": "Aramberri esq. Julián Villagrán, Centro, Monterrey",
+      "coords": { "lat": 25.6771, "lng": -100.3229 },
+      "categoria_conceptual": "Restos en pie",
+      "imagenes": [
+        { "src": "assets/images/montoya/01.jpg", "alt": "Fachada Cine Montoya", "credit": "" }
+      ],
+      "testimonio_archivo": "[POR LLENAR]"
+    },
+    {
+      "id": "cine_monterrey",
+      "orden_global": 4,
+      "acto": 1,
+      "nombre": "Antiguo Cine Monterrey",
+      "por_que_paramos": "[POR LLENAR — punto ancla del taller. Mencionar el vínculo con la pieza 'La ilusión' de Margolles que se verá al final]",
+      "descripcion_corta": "Cine más importante de su época con 4,650 butacas en 3 niveles. Inaugurado con 'Soy un prófugo' de Cantinflas. Diseño de Lisandro Peña Jr. y Arturo Olivero Cedeño.",
+      "ano_fundacion": "1947 (19 de diciembre)",
+      "ano_abandono": "Cayó en desuso en los años 60, clausurado en los 90",
+      "estado_actual": "Interior funciona como mercado. Fachada protegida por el INAH.",
+      "direccion": "Aramberri esq. José Marroquín Leal, frente a la Alameda Mariano Escobedo, Centro, Monterrey",
+      "coords": { "lat": 25.6768, "lng": -100.3204 },
+      "categoria_conceptual": "Patrimonio en pie + Comunidad alrededor",
+      "imagenes": [
+        { "src": "assets/images/cine_monterrey/historico_01.jpg", "alt": "Cine Monterrey en su época activa (archivo)", "credit": "[Fuente del archivo]" },
+        { "src": "assets/images/cine_monterrey/actual_01.jpg", "alt": "Fachada hoy", "credit": "" },
+        { "src": "assets/images/cine_monterrey/mercado_01.jpg", "alt": "Interior funcionando como mercado", "credit": "" }
+      ],
+      "testimonio_archivo": "[POR LLENAR]"
+    },
+    {
+      "id": "macroplaza",
+      "orden_global": 5,
+      "acto": 2,
+      "nombre": "Macroplaza — Fuente de Neptuno",
+      "por_que_paramos": "[POR LLENAR — aquí se narran simultáneamente la demolición del Cine Elizondo y la del Cine Rex/Olympia]",
+      "descripcion_corta": "Aquí estuvo el Cine Elizondo (1943-1981), construido con decoración asiática. A pocas calles estuvo el Cine Rex/Olympia. Ambos fueron demolidos durante la construcción de la Macroplaza.",
+      "ano_fundacion": "Cine Elizondo: 1943 (10 sept). Cine Rex: 1937 (28 ago)",
+      "ano_abandono": "Elizondo: última función 2 nov 1981, demolido abril 1983. Rex: cierre 1972, demolido para Macroplaza.",
+      "estado_actual": "Borrado del paisaje. En el predio del Elizondo se ubica la Fuente de Neptuno.",
+      "direccion": "Av. Zaragoza, entre Padre Mier y Matamoros, Macroplaza, Centro, Monterrey",
+      "coords": { "lat": 25.6684, "lng": -100.3101 },
+      "categoria_conceptual": "Ausencia documentada",
+      "imagenes": [
+        { "src": "assets/images/macroplaza/elizondo_archivo_01.jpg", "alt": "Cine Elizondo en operación (archivo)", "credit": "[Fuente]" },
+        { "src": "assets/images/macroplaza/rex_archivo_01.jpg", "alt": "Cine Rex en operación (archivo)", "credit": "[Fuente]" },
+        { "src": "assets/images/macroplaza/fuente_neptuno_actual.jpg", "alt": "Fuente de Neptuno hoy", "credit": "" }
+      ],
+      "testimonio_archivo": "[POR LLENAR — guión doble: Elizondo + Rex]"
+    },
+    {
+      "id": "marco",
+      "orden_global": 6,
+      "acto": 3,
+      "nombre": "MARCO — Museo de Arte Contemporáneo",
+      "por_que_paramos": "[POR LLENAR — cierre del recorrido. Aquí se encuentra 'La ilusión' (2025), pieza de Margolles construida con el letrero del Antiguo Cine Monterrey]",
+      "descripcion_corta": "Sede de la exposición '¿Cómo salimos?' de Teresa Margolles, hasta el 3 de mayo de 2026. Cierre del fototour.",
+      "ano_fundacion": "1991",
+      "ano_abandono": "—",
+      "direccion": "Juan Zuazua y Padre Raymundo Jardón S/N, Centro, Monterrey",
+      "coords": { "lat": 25.6647, "lng": -100.3098 },
+      "categoria_conceptual": "Punto de llegada",
+      "imagenes": [
+        { "src": "assets/images/marco/exterior_01.jpg", "alt": "MARCO, fachada", "credit": "" },
+        { "src": "assets/images/marco/la_ilusion.jpg", "alt": "Pieza 'La ilusión' (2025) de Teresa Margolles", "credit": "[Crédito museo / artista]" }
+      ],
+      "testimonio_archivo": "[POR LLENAR — opcional, podría ser nota sobre la pieza de Margolles]"
+    }
+  ]
+}

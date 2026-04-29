@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derivas Fotográficas — Fototour</title>
+  <meta name="description" content="Kit del taller Derivas Fotográficas. Creación de archivo fotográfico en Monterrey. 2 de mayo de 2026.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+
+  <!-- Mobile hamburger -->
+  <button class="menu-toggle" aria-label="Abrir menú de navegación" id="menuToggle">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Índice</span>
+      <button class="sidebar-close" aria-label="Cerrar menú" id="sidebarClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Navegación del taller">
+      <ul>
+        <li><a href="#portada" class="nav-link active" aria-current="location">Sobre el taller</a></li>
+        <li>
+          <a href="#recorrido" class="nav-link">El recorrido</a>
+          <ul class="nav-sub" id="navActos"></ul>
+        </li>
+        <li><a href="#formula" class="nav-link">Fórmula fotográfica</a></li>
+        <li><a href="#cuidados" class="nav-link">Cuidados</a></li>
+        <li><a href="#archivos" class="nav-link">Archivos Históricos</a></li>
+        <li><a href="#pasos" class="nav-link">Colección fotográfica digital</a></li>
+        <li><a href="#whatsapp" class="nav-link">WhatsApp</a></li>
+        <li><a href="#creditos" class="nav-link">Créditos</a></li>
+      </ul>
+    </nav>
+    <button class="btn-print" aria-label="Imprimir kit del taller" onclick="window.print()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      Imprimir
+    </button>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Section 1: Portada -->
+    <section id="portada" class="section">
+      <div class="section-inner">
+        <p class="section-overline">Fototour · 2 de mayo de 2026 · 9:00–13:00</p>
+        <h1 class="hero-title">Derivas Fotográficas</h1>
+        <p class="hero-subtitle">Creación de archivo fotográfico en Monterrey</p>
+        <div class="hero-meta">
+          <p>Vinculado a la exposición <strong>¿Cómo salimos?</strong> de Teresa Margolles en MARCO</p>
+        </div>
+        <div class="intro-text" id="introText"></div>
+
+        <!-- Impresión: mapa del recorrido + acceso a versión digital -->
+        <div class="print-only print-map-qr">
+          <div class="print-map-box">
+            <p class="print-box-label">Mapa del recorrido</p>
+            <img id="printMapImage" alt="Mapa del recorrido — Centro de Monterrey, Derivas Fotográficas 2026" class="print-map-img">
+          </div>
+          <div class="print-qr-bar">
+            <img id="printQrImage" alt="Código QR — versión digital del kit" class="print-qr-img">
+            <div class="print-qr-text">
+              <p class="print-qr-heading">Versión digital de este kit:</p>
+              <p class="print-bitly-url" id="printBitlyUrl">—</p>
+              <p class="print-qr-note">Escanea el código o escribe la dirección en tu navegador.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Recorrido -->
+    <section id="recorrido" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">El recorrido</h2>
+        <p class="section-desc">Seis paradas organizadas en tres actos. Cada acto marca un modo distinto de desaparición y permanencia.</p>
+        <div class="ruta-calles" aria-label="Ruta del recorrido">
+          <div class="ruta-segmento">
+            <span class="ruta-calle">Villagrán</span>
+            <span class="ruta-paradas">Cine Encanto · Cine Alameda · Cine Montoya</span>
+          </div>
+          <span class="ruta-sep" aria-hidden="true">→</span>
+          <div class="ruta-segmento">
+            <span class="ruta-calle">Aramberri</span>
+            <span class="ruta-paradas">Cine Monterrey</span>
+          </div>
+          <span class="ruta-sep" aria-hidden="true">→</span>
+          <div class="ruta-segmento ruta-segmento--calle">
+            <span class="ruta-calle">Modesto Arreola</span>
+          </div>
+          <span class="ruta-sep" aria-hidden="true">→</span>
+          <div class="ruta-segmento ruta-segmento--calle">
+            <span class="ruta-calle">Zaragoza</span>
+          </div>
+          <span class="ruta-sep" aria-hidden="true">→</span>
+          <div class="ruta-segmento">
+            <span class="ruta-calle">Macroplaza</span>
+            <span class="ruta-paradas">Cine Rex · Cine Elizondo</span>
+          </div>
+          <span class="ruta-sep" aria-hidden="true">→</span>
+          <div class="ruta-segmento">
+            <span class="ruta-calle">MARCO</span>
+          </div>
+        </div>
+        <div id="map" class="map-container"></div>
+        <div id="actosContainer" class="actos-container"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: Fórmula -->
+    <section id="formula" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Fórmula de colección fotográfica</h2>
+        <p class="section-desc">Tres elementos para construir cada imagen del archivo.</p>
+        <div class="formula-cards">
+          <div class="formula-card">
+            <span class="formula-number">1</span>
+            <h3>Lo que queda</h3>
+            <p>Los restos materiales: fachadas, letreros, marcas en muros, vestigios.</p>
+          </div>
+          <div class="formula-card">
+            <span class="formula-number">2</span>
+            <h3>Dónde estamos</h3>
+            <p>Nuestro presente: el cuerpo, la calle viva, el momento del registro.</p>
+          </div>
+          <div class="formula-card">
+            <span class="formula-number">3</span>
+            <h3>Quien pasa</h3>
+            <p>La comunidad y los gestos humanos en torno al espacio: la mano del locatario, la persona caminando frente a la fachada, el cliente saliendo, el vendedor recargado.</p>
+          </div>
+        </div>
+        <p class="formula-hint"><em>Conjunta al menos uno de estos tres elementos en cada fotografía. Una buena imagen del archivo combina dos o tres.</em></p>
+      </div>
+    </section>
+
+    <!-- Section 4: Cuidados -->
+    <section id="cuidados" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Cuidados al fotografiar</h2>
+        <div class="cuidados-grid">
+          <div class="cuidado-block">
+            <h3>Identidades de personas</h3>
+            <p>Pide permiso antes de fotografiar a alguien identificable. Si la persona es menor de edad, requiere permiso del tutor por escrito o no se fotografía.</p>
+          </div>
+          <div class="cuidado-block">
+            <h3>No infancias</h3>
+            <p>No se publican rostros de niñas, niños y adolescentes en el archivo, aunque se haya tenido permiso verbal en el momento.</p>
+          </div>
+          <div class="cuidado-block">
+            <h3>Calidad de captura</h3>
+            <p>Fotografía en horizontal o vertical según el sujeto, no recortes después. Limpia el lente. Revisa enfoque antes de seguir caminando.</p>
+          </div>
+          <div class="cuidado-block">
+            <h3>Si alguien te pregunta</h3>
+            <p>Si alguien pregunta ¿para qué son las fotos? Responde que son para una colección digital que estará disponible en Wikimedia Commons.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Archivos Históricos -->
+    <section id="archivos" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Archivos Históricos</h2>
+        <p class="section-desc">Fragmentos reconstruidos a partir de fuentes de archivo sobre cada parada.</p>
+        <div id="testimoniosContainer"></div>
+      </div>
+    </section>
+
+    <!-- Section 5.5: Colección fotográfica digital -->
+    <section id="pasos" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Colección fotográfica digital</h2>
+        <p class="pasos-antes"><strong>Antes de empezar:</strong> ten tus fotos seleccionadas en tu celular o computadora, ya con el nombre que les vas a poner (ver paso&nbsp;4).</p>
+
+        <div class="pasos-list">
+
+          <div class="paso">
+            <span class="paso-num">1</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Crea tu cuenta</h3>
+              <p>Entra a <a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">commons.wikimedia.org</a> y haz clic en <strong>Crear una cuenta</strong> (esquina superior derecha). Solo necesitas un nombre de usuario, contraseña y correo. El nombre será visible públicamente, así que elige uno con el que te sientas cómoda/o.</p>
+              <p class="paso-nota">Si ya tienes cuenta de Wikipedia, sirve la misma. No necesitas crear otra.</p>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">2</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Abre el asistente de subida</h3>
+              <p>Una vez con sesión iniciada, ve a la página principal y presiona el botón azul de <strong>subida</strong> o <strong>upload</strong>. Es un formulario guiado en 5 pasos. Puedes subir hasta 50 imágenes a la vez.</p>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">3</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Selecciona tus archivos</h3>
+              <p>Arrastra tus fotos o haz clic en <strong>Seleccionar archivos</strong>. Espera a que carguen (la barra debe llegar al 100%). Acepta el formato JPG.</p>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">4</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Renombra tus archivos con la fórmula del taller</h3>
+              <p>Esto es importante: el nombre del archivo es lo primero que verá quien lo encuentre. Usa esta fórmula:</p>
+              <div class="paso-formula">
+                <span>Elemento_2026_[Parada]_[TuNombre]_[NN].jpg</span>
+                <div class="paso-formula-example">Ejemplo: Mural de Aguila_2026_CineMonterrey_MariaLopez_03.jpg</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">5</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Declara la autoría y la licencia</h3>
+              <ul class="paso-items">
+                <li>En <strong>¿Esta es una obra propia?</strong> → marca <em>Sí, es obra propia</em>.</li>
+                <li>En <strong>Licencia</strong> → elige <em>Creative Commons Atribución-CompartirIgual 4.0 (CC BY-SA 4.0)</em>.</li>
+                <li>En <strong>Autor</strong> → aparece tu nombre de usuario; déjalo así o agrega tu nombre real si prefieres.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">6</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Describe cada imagen</h3>
+              <p>Por cada foto, llena:</p>
+              <ul class="paso-items">
+                <li><strong>Título</strong> (lo que se ve en la imagen, en una línea corta).</li>
+                <li><strong>Descripción</strong> (lo que anotaste en tu ficha de registro durante el taller: qué es, dónde estabas parada/o al disparar).</li>
+                <li><strong>Fecha</strong> (la del día del taller: 2 de mayo de 2026).</li>
+                <li><strong>Ubicación</strong> (puedes pegar las coordenadas o el nombre del cine).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">7</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Categoriza</h3>
+              <p>Este paso es el que hace que tu foto sea encontrable. En el campo de categorías, pega esta categoría exacta:</p>
+              <ul class="paso-categorias">
+                <li class="cat-main">Derivas Fotográficas (Monterrey, 2026)</li>
+              </ul>
+              <p>Y al menos una de estas, según corresponda al cine que fotografiaste:</p>
+              <ul class="paso-categorias">
+                <li>Antiguo Cine Monterrey</li>
+                <li>Cine Encanto (Monterrey)</li>
+                <li>Cine Alameda (Monterrey)</li>
+                <li>Cine Montoya (Monterrey)</li>
+                <li>Macroplaza, Monterrey</li>
+                <li>Museo de Arte Contemporáneo de Monterrey</li>
+              </ul>
+              <p class="paso-nota">Recuerda que puedes identificar tus imágenes con cuantas categorías las hagan identificable por otras personas.</p>
+            </div>
+          </div>
+
+          <div class="paso">
+            <span class="paso-num">8</span>
+            <div class="paso-content">
+              <h3 class="paso-title">Publica</h3>
+              <p>Haz clic en <strong>Publicar archivos</strong>. Listo. Tu imagen ya forma parte de la colección.</p>
+              <p class="paso-nota">Después de subir, tu foto puede tardar unos minutos en aparecer en la categoría. Es normal.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pasos-ayuda">
+          <strong>Si te atoras:</strong> no dudes en realizar tu pregunta en el grupo de WhatsApp del taller. Resolvemos en grupo.
+        </div>
+
+        <div class="pasos-video no-print">
+          <p class="pasos-video-label">Video de referencia</p>
+          <div class="pasos-video-wrapper">
+            <iframe src="https://commons.wikimedia.org/wiki/File:C%C3%B3mo_subir_imagen_a_Wikimedia_Commons_con_categor%C3%ADas_y_geolocalizaci%C3%B3n_(para_usarla_en_Wikipedia).webm?embedplayer=yes" frameborder="0" loading="lazy" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 6: WhatsApp -->
+    <section id="whatsapp" class="section">
+      <div class="section-inner section-center">
+        <h2 class="section-title">Grupo de WhatsApp</h2>
+        <p class="section-desc">Únete al grupo del taller para compartir fotografías y coordinar durante el recorrido.</p>
+        <div class="qr-container">
+          <img src="assets/qr-whatsapp.png" alt="Código QR para unirse al grupo de WhatsApp del taller" class="qr-image" onerror="this.parentElement.style.display='none'">
+        </div>
+        <p class="qr-fallback">Si el QR no funciona, usa este enlace: <a href="#" id="whatsappLink">Enlace pendiente</a></p>
+      </div>
+    </section>
+
+    <!-- Section 7: Créditos -->
+    <section id="creditos" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Créditos</h2>
+        <div class="creditos-content">
+          <div class="credito-bloque">
+            <h3>Imparten</h3>
+            <p>Tania Martínez Báez<br>Ricardo Burnes</p>
+          </div>
+          <div class="credito-bloque">
+            <h3>Organiza</h3>
+            <p>MARCO — Museo de Arte Contemporáneo de Monterrey</p>
+          </div>
+          <div class="credito-bloque">
+            <h3>Con el apoyo de</h3>
+            <p>EFI Artes · FEMSA · GAC</p>
+          </div>
+          <div class="credito-bloque credito-legal">
+            <p>Este material es parte del kit del taller "Derivas Fotográficas", vinculado a la exposición <em>¿Cómo salimos?</em> de Teresa Margolles en MARCO (hasta el 3 de mayo de 2026). Uso exclusivo para participantes del taller.</p>
+          </div>
+          <div class="credito-bloque credito-fecha">
+            <p>Última actualización: abril 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Información de parada" hidden>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <span class="modal-tag" id="modalTag"></span>
+        <button class="modal-close" aria-label="Cerrar" id="modalClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Print-only: stop details rendered here by JS -->
+  <div class="print-stops" id="printStops"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
