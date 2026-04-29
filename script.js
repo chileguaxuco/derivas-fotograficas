@@ -340,7 +340,7 @@
   };
 
   // URL de la versión digital — actualizar al desplegar en GitHub Pages
-  var DIGITAL_URL = '';
+  var DIGITAL_URL = 'https://chileguaxuco.github.io/derivas-fotograficas/';
 
   // --- Leaflet Map ---
   function initMap(stops, actos, stopMap) {

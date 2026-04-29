@@ -3,6 +3,8 @@
 Kit digital e imprimible para el fototour del **2 de mayo de 2026**, 9:00–13:00.
 Vinculado a la exposición *¿Cómo salimos?* de Teresa Margolles en MARCO, Monterrey.
 
+**Sitio en línea:** https://chileguaxuco.github.io/derivas-fotograficas/
+
 ---
 
 ## Estado del proyecto
@@ -18,31 +20,49 @@ Vinculado a la exposición *¿Cómo salimos?* de Teresa Margolles en MARCO, Mont
 
 **Mapa**
 - [x] Mapa interactivo Leaflet con tiles de OpenStreetMap
-- [x] Marcadores numerados (1–6) con color por acto (coral / negro / gris)
-- [x] Polilínea del recorrido con waypoints que siguen calles reales: Julián Villagrán → Modesto Arreola → Calle Zaragoza → Macroplaza
+- [x] Marcadores numerados (1–7) con color por acto (coral / negro / gris)
+- [x] Polilínea del recorrido con waypoints que siguen calles reales: Julián Villagrán → Modesto Arreola → Calle Zaragoza → Macroplaza → MARCO
 - [x] Tooltip en marcadores (nombre + año) al hacer hover
-- [x] Modal de parada con descripción, metadatos e imágenes al hacer clic
+- [x] Modal de parada con descripción, metadatos, imágenes y crédito de autoría al hacer clic
 
 **Sección Recorrido**
-- [x] Indicador de ruta tipográfico (`.ruta-calles`): calles con paradas en tipografía editorial (Cormorant Garamond itálica + Lora), sin fondos ni píldoras — estética coherente con el resto
-- [x] Párrafo descriptivo de las seis paradas y calles del recorrido
+- [x] Indicador de ruta tipográfico (`.ruta-calles`): scroll horizontal en móvil, sin overflow
+- [x] 7 paradas organizadas en 3 actos: El Olvido / La Destrucción / La Reinterpretación
 
 **Secciones de contenido**
 - [x] Sección "Fórmula de colección fotográfica" (3 tarjetas)
 - [x] Sección "Cuidados al fotografiar" (4 bloques 2×2: identidades, no infancias, calidad, si alguien te pregunta)
 - [x] Sección "Archivos Históricos" (testimonios por parada, oculto si no hay contenido)
 - [x] Sección "Colección fotográfica digital" (8 pasos con fórmula de nombrado, categorías de Wikimedia, video embebido)
-- [x] Sección "WhatsApp" con QR y enlace de respaldo
+- [x] Sección "WhatsApp" con QR y enlace al grupo
 
-**Datos de paradas**
-- [x] Campo etiquetado como "Año de inauguración" en modal, tooltip del mapa y versión impresa
-- [x] Campos editables en `data/stops.json`: `ano_fundacion`, `ano_abandono`, `estado_actual`, `descripcion_corta`, `por_que_paramos`, `testimonio_archivo`
+**Datos de paradas (7 stops)**
+- [x] Cine Encanto (acto 1) — fachada en pie
+- [x] Cine Alameda (acto 1) — fachada en pie
+- [x] Cine Montoya (acto 1) — fachada en pie
+- [x] Antiguo Cine Monterrey (acto 1) — patrimonio + mercado interior
+- [x] Teatro Juárez / Cine Rex / Cine Olympia (acto 2) — 4 generaciones, borrado por Macroplaza
+- [x] Cine Elizondo (acto 2) — borrado por Macroplaza, predio hoy Fuente de Neptuno
+- [x] MARCO (acto 3) — sede de la exposición, cierre del fototour
+
+**Imágenes**
+- [x] Encanto: `01.png`
+- [x] Alameda: `01.png`, `02.png`
+- [x] Montoya: `01.png`
+- [x] Cine Monterrey: `actual_01.jpg` (CC BY-SA 2.0, LABNL/CONARTE)
+- [x] Teatro Juárez: `1.png`–`4.png` (secuencia de 4 generaciones, cinesaurio.com)
+- [x] Elizondo: `1.png`–`5.png` (archivo cinesaurio.com) + `fuente_neptuno_actual.jpg` (CC BY-SA 4.0)
+- [x] MARCO: `exterior_01.jpg` (CC BY-SA 3.0), `exterior_02.jpg` (CC BY-SA 3.0)
+- [x] QR WhatsApp: `assets/qr-whatsapp.png`
+
+**Despliegue**
+- [x] Publicado en GitHub Pages: https://chileguaxuco.github.io/derivas-fotograficas/
+- [x] `DIGITAL_URL` configurada en `script.js` — QR y enlace de la versión digital activos en impresión
+- [x] WhatsApp: enlace real del grupo configurado en `index.html` y QR en `assets/`
 
 **Versión imprimible**
 - [x] `print.css` con layout carta (US Letter, 2cm márgenes)
-- [x] Página 1: portada + mapa estático de Wikimedia Maps + (cuando esté configurado) QR y bit.ly de la versión digital
 - [x] Mapa interactivo Leaflet visible en impresión (con marcadores y ruta)
-- [x] Páginas siguientes: secciones fórmula, cuidados, archivos, colección fotográfica digital
 - [x] Detalles de paradas (actos + descripción) generados por JS en bloque de impresión
 - [x] Video de Wikimedia Commons oculto en impresión (`.no-print`)
 - [x] Pie de página automático con nombre del taller y número de página
@@ -53,48 +73,24 @@ Vinculado a la exposición *¿Cómo salimos?* de Teresa Margolles en MARCO, Mont
 
 ### Críticos (antes del 2 de mayo)
 
-- [ ] **Publicar en GitHub Pages**
-  1. Crear repositorio público en GitHub (ej. `documentar-el-olvido`)
-  2. Subir la carpeta `files/` como raíz del repositorio
-  3. Activar GitHub Pages: `Settings → Pages → Deploy from branch: main → / (root)`
-  4. La URL quedará en: `https://[usuario].github.io/documentar-el-olvido/`
+- [ ] **Llenar `por_que_paramos` en cada parada** (`data/stops.json`)
+  - Texto del facilitador, ~60–80 palabras por parada
+  - Se muestra en el modal al hacer clic sobre cada marcador del mapa
 
-- [ ] **Configurar URL digital en `script.js`**
-  - Una vez desplegado, editar línea `var DIGITAL_URL = '';` en `script.js`
-  - Poner la URL de GitHub Pages (o dominio personalizado)
-  - El QR y bit.ly en la versión impresa se activarán automáticamente
+- [ ] **Llenar `testimonio_archivo` en cada parada** (`data/stops.json`)
+  - Guión a partir de archivos históricos
+  - Se muestra en la sección "Archivos Históricos" (oculto si está vacío)
 
-- [ ] **Agregar código QR y bit.ly de la versión digital** a la versión impresa
-  - Crear el bit.ly en [bitly.com](https://bitly.com) con la URL de GitHub Pages
-  - El QR se genera automáticamente desde `api.qrserver.com` cuando se configura `DIGITAL_URL`
-
-- [ ] **Agregar código QR del grupo de WhatsApp**
-  - Crear el grupo de WhatsApp del taller
-  - Guardar el enlace de invitación en el campo `whatsapp.url` del JSON
-  - Guardar el QR como `assets/qr-whatsapp.png`
-
-- [ ] **Agregar imágenes de los cines** en `assets/images/`
-  - Especificaciones: JPG, lado largo máximo 1600px, < 300 KB c/u
-  - Subcarpetas: `encanto/`, `alameda/`, `montoya/`, `cine_monterrey/`, `macroplaza/`, `marco/`
-
-- [ ] **Agregar un archivo histórico (testimonio) por cine**
-  - Editar el campo `testimonio_archivo` de cada parada en `data/stops.json`
-  - Se mostrarán automáticamente en la sección "Archivos Históricos"
-
-- [ ] **Llenar los campos `[POR LLENAR]` en `data/stops.json`**
-  - `por_que_paramos` en cada parada (texto del facilitador, ~60–80 palabras)
-  - `testimonio_archivo` en cada parada (guión a partir de archivos históricos)
+- [ ] **Imágenes faltantes** en `assets/images/`
+  - `cine_monterrey/historico_01.jpg` — foto histórica del cine en sus años activos (1947–1960s)
+  - `cine_monterrey/mercado_01.jpg` — interior funcionando como mercado
+  - `elizondo/fuente_neptuno_actual.jpg` — ya referenciada, falta subir el archivo
+  - `marco/la_ilusion.jpg` — pieza *La ilusión* (2025) de Teresa Margolles
 
 ### Mejoras opcionales
 
-- [ ] **Primera página: foto del Antiguo Cine Monterrey**
-  - Añadir imagen de portada en la sección `#portada` para darle más presencia visual
-  - Sugerido: foto histórica del Cine Monterrey en sus años activos (1947–1960s)
-  - En `index.html`, dentro de `<section id="portada">`, agregar `<figure class="hero-image">` después del bloque `.hero-meta`
-
 - [ ] **Afinar waypoints de la ruta en el mapa**
   - Los waypoints actuales son aproximaciones de coordenadas de calle
-  - Revisar en OpenStreetMap las coordenadas exactas de: Modesto Arreola en Marroquín Leal, Modesto Arreola en Zaragoza, y el tramo Zaragoza hacia la Macroplaza
   - Editar el objeto `ROUTE_WAYPOINTS` en `script.js` línea ~314
 
 - [ ] **Verificar la impresión en distintos navegadores**
@@ -102,8 +98,11 @@ Vinculado a la exposición *¿Cómo salimos?* de Teresa Margolles en MARCO, Mont
   - Firefox: puede haber diferencias en el mapa canvas
   - Safari iOS: probar desde el dispositivo con "Imprimir" del sistema
 
+- [ ] **Agregar dirección exacta del Teatro Juárez**
+  - Campo `direccion` en `data/stops.json` marcado como `[POR LLENAR]`
+
 - [ ] **Dominio personalizado** (opcional)
-  - Si se quiere `derivasfotograficas.org` u otro dominio, agregar archivo `CNAME` en la raíz con el dominio y configurar DNS según la [documentación de GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+  - Agregar archivo `CNAME` en la raíz y configurar DNS
 
 ---
 
@@ -123,10 +122,11 @@ files/
     │   ├── alameda/
     │   ├── montoya/
     │   ├── cine_monterrey/
-    │   ├── macroplaza/
+    │   ├── teatro_juarez/
+    │   ├── elizondo/
     │   └── marco/
     ├── icons/
-    └── qr-whatsapp.png ← QR del grupo (pendiente)
+    └── qr-whatsapp.png
 ```
 
 ---
