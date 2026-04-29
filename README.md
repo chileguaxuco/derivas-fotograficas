@@ -30,8 +30,8 @@ Vinculado a la exposición *¿Cómo salimos?* de Teresa Margolles en MARCO, Mont
 - [x] 7 paradas organizadas en 3 actos: El Olvido / La Destrucción / La Reinterpretación
 
 **Secciones de contenido**
-- [x] Sección "Fórmula de colección fotográfica" (3 tarjetas)
-- [x] Sección "Cuidados al fotografiar" (4 bloques 2×2: identidades, no infancias, calidad, si alguien te pregunta)
+- [x] Sección "Fórmula de colección fotográfica" (3 tarjetas: Lo que queda / Dónde estamos / El espacio y la comunidad)
+- [x] Sección "Cuidados al fotografiar" (6 bloques: identidades, no infancias, calidad, si alguien te pregunta, marcas comerciales, identifica el espacio)
 - [x] Sección "Archivos Históricos" (testimonios por parada, oculto si no hay contenido)
 - [x] Sección "Colección fotográfica digital" (8 pasos con fórmula de nombrado, categorías de Wikimedia, video embebido)
 - [x] Sección "WhatsApp" con QR y enlace al grupo
