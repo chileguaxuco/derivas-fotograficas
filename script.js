@@ -109,7 +109,12 @@
     if (stop.imagenes && stop.imagenes.length > 0) {
       html += '<div class="modal-gallery" id="modalGallery">';
       stop.imagenes.forEach(function (img) {
-        html += '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt || '') + '" loading="lazy" onerror="this.remove()">';
+        html += '<figure class="gallery-item">';
+        html += '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt || '') + '" loading="lazy" onerror="this.closest(\'figure\').remove()">';
+        if (img.credit && !isPorLlenar(img.credit)) {
+          html += '<figcaption>' + escHtml(img.credit) + '</figcaption>';
+        }
+        html += '</figure>';
       });
       html += '</div>';
     }

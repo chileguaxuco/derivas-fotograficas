@@ -19,7 +19,7 @@
       "numero": 2,
       "titulo": "La Destrucción",
       "descripcion": "El espacio donde dos cines fueron borrados completamente del paisaje urbano. Aquí no hay fachada que registrar; hay una ausencia que documentar.",
-      "stops": ["macroplaza"]
+      "stops": ["teatro_juarez", "elizondo"]
     },
     {
       "numero": 3,
@@ -43,8 +43,7 @@
       "coords": { "lat": 25.6815, "lng": -100.3223 },
       "categoria_conceptual": "Restos en pie",
       "imagenes": [
-        { "src": "assets/images/encanto/01.jpg", "alt": "Fachada Cine Encanto, vista frontal", "credit": "" },
-        { "src": "assets/images/encanto/02.jpg", "alt": "Detalle del letrero residual", "credit": "" }
+        { "src": "assets/images/encanto/01.png", "alt": "Fachada Cine Encanto, vista frontal", "credit": "Fuente: cinesaurio.com" }
       ],
       "testimonio_archivo": "[POR LLENAR — guión a partir de archivo]"
     },
@@ -62,7 +61,8 @@
       "coords": { "lat": 25.6811, "lng": -100.3222 },
       "categoria_conceptual": "Restos en pie",
       "imagenes": [
-        { "src": "assets/images/alameda/01.jpg", "alt": "Fachada Cine Alameda", "credit": "" }
+        { "src": "assets/images/alameda/01.png", "alt": "Fachada Cine Alameda", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/alameda/02.png", "alt": "Cine Alameda, detalle", "credit": "Fuente: cinesaurio.com" }
       ],
       "testimonio_archivo": "[POR LLENAR]"
     },
@@ -80,7 +80,7 @@
       "coords": { "lat": 25.6771, "lng": -100.3229 },
       "categoria_conceptual": "Restos en pie",
       "imagenes": [
-        { "src": "assets/images/montoya/01.jpg", "alt": "Fachada Cine Montoya", "credit": "" }
+        { "src": "assets/images/montoya/01.png", "alt": "Fachada Cine Montoya", "credit": "Fuente: Facebook / Conoce más allá" }
       ],
       "testimonio_archivo": "[POR LLENAR]"
     },
@@ -99,34 +99,58 @@
       "categoria_conceptual": "Patrimonio en pie + Comunidad alrededor",
       "imagenes": [
         { "src": "assets/images/cine_monterrey/historico_01.jpg", "alt": "Cine Monterrey en su época activa (archivo)", "credit": "[Fuente del archivo]" },
-        { "src": "assets/images/cine_monterrey/actual_01.jpg", "alt": "Fachada hoy", "credit": "" },
+        { "src": "assets/images/cine_monterrey/actual_01.jpg", "alt": "Fachada hoy — Antiguo Cine Monterrey convertido en mercado popular", "credit": "LABNL / CONARTE · CC BY-SA 2.0 · Wikimedia Commons" },
         { "src": "assets/images/cine_monterrey/mercado_01.jpg", "alt": "Interior funcionando como mercado", "credit": "" }
       ],
       "testimonio_archivo": "[POR LLENAR]"
     },
     {
-      "id": "macroplaza",
+      "id": "teatro_juarez",
       "orden_global": 5,
       "acto": 2,
-      "nombre": "Macroplaza — Fuente de Neptuno",
-      "por_que_paramos": "[POR LLENAR — aquí se narran simultáneamente la demolición del Cine Elizondo y la del Cine Rex/Olympia]",
-      "descripcion_corta": "Aquí estuvo el Cine Elizondo (1943-1981), construido con decoración asiática. A pocas calles estuvo el Cine Rex/Olympia. Ambos fueron demolidos durante la construcción de la Macroplaza.",
-      "ano_fundacion": "Cine Elizondo: 1943 (10 sept). Cine Rex: 1937 (28 ago)",
-      "ano_abandono": "Elizondo: última función 2 nov 1981, demolido abril 1983. Rex: cierre 1972, demolido para Macroplaza.",
-      "estado_actual": "Borrado del paisaje. En el predio del Elizondo se ubica la Fuente de Neptuno.",
-      "direccion": "Av. Zaragoza, entre Padre Mier y Matamoros, Macroplaza, Centro, Monterrey",
+      "nombre": "Teatro Juárez — Tribunal Superior de Justicia",
+      "por_que_paramos": "[POR LLENAR — aquí ocurrieron las primeras funciones públicas de cine en Monterrey (1898). Narrar las cuatro generaciones en un solo predio: Teatro Juárez → Teatro Independencia → Cine Rex → Cine Olympia / Cine Atenea]",
+      "descripcion_corta": "En este punto se llevaron a cabo las primeras funciones públicas de cine en Monterrey, en el Teatro Juárez. Cuatro generaciones de sala ocuparon el mismo predio durante 85 años: Teatro Juárez (1898–1909), Teatro Independencia (1910–1935), Cine Rex (1937–1971) y Cine Olympia / Cine Atenea (1971–1983). Todo fue demolido para la construcción de la Macroplaza.",
+      "ano_fundacion": "Teatro Juárez: 1898 (primeras funciones de cine en Monterrey). Cine Rex: 1937 (28 ago)",
+      "ano_abandono": "Cine Olympia / Atenea: cierre y demolición 1983",
+      "estado_actual": "Borrado del paisaje. En el predio se ubica ahora el Tribunal Superior de Justicia.",
+      "direccion": "[POR LLENAR]",
+      "coords": { "lat": 25.670522522061955, "lng": -100.31011282300705 },
+      "categoria_conceptual": "Ausencia documentada — cuatro generaciones",
+      "imagenes": [
+        { "src": "assets/images/teatro_juarez/1.png", "alt": "Teatro Juárez (1898–1909) — primeras funciones públicas de cine en Monterrey", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/teatro_juarez/2.png", "alt": "Teatro Independencia (1910–1935)", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/teatro_juarez/3.png", "alt": "Cine Rex (1937–1971)", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/teatro_juarez/4.png", "alt": "Cine Olympia / Cine Atenea (1971–1983)", "credit": "Fuente: cinesaurio.com" }
+      ],
+      "testimonio_archivo": "[POR LLENAR — narrar la sucesión de los cuatro teatros-cine en este predio]"
+    },
+    {
+      "id": "elizondo",
+      "orden_global": 6,
+      "acto": 2,
+      "nombre": "Cine Elizondo — Fuente de Neptuno",
+      "por_que_paramos": "[POR LLENAR — narrar la ausencia: inaugurado 10 sept 1943 con 'China' (Loretta Young), con Cantinflas y Jorge Negrete en la sala. Buda en el muro sur, dragón dorado en el norte. Última función 2 nov 1981 con 'Cualquier travesura menos amor' (Clint Eastwood). Demolido por decreto del gobernador Martínez Domínguez, abril 1983. La Fuente de Neptuno marca el predio.]",
+      "descripcion_corta": "Cine de ornamentación oriental diseñado por Enrique de la Mora y Palomar: un Buda de gran formato en el muro sur y un dragón dorado en el norte. Inaugurado el viernes 10 de septiembre de 1943 con la película 'China' (Loretta Young y Alan Ladd). En el acto inaugural estuvieron Cantinflas, Jorge Negrete y Domingo Soler. Última función: 2 de noviembre de 1981. Demolido en abril de 1983 por orden del gobernador Alfonso Martínez Domínguez para construir la Macroplaza. Su predio lo ocupa hoy la Fuente de Neptuno.",
+      "ano_fundacion": "1943 (10 de septiembre, 8:45 PM). Construido sobre el predio del Teatro del Progreso (incendiado el 27 jun 1931).",
+      "ano_abandono": "Última función: 2 nov 1981. Demolido: abril 1983.",
+      "estado_actual": "Borrado del paisaje. En el predio se ubica la Fuente de Neptuno.",
+      "direccion": "Av. Zaragoza 833 Sur, entre Padre Mier y Mariano Matamoros, Macroplaza, Centro, Monterrey",
       "coords": { "lat": 25.6684, "lng": -100.3101 },
       "categoria_conceptual": "Ausencia documentada",
       "imagenes": [
-        { "src": "assets/images/macroplaza/elizondo_archivo_01.jpg", "alt": "Cine Elizondo en operación (archivo)", "credit": "[Fuente]" },
-        { "src": "assets/images/macroplaza/rex_archivo_01.jpg", "alt": "Cine Rex en operación (archivo)", "credit": "[Fuente]" },
-        { "src": "assets/images/macroplaza/fuente_neptuno_actual.jpg", "alt": "Fuente de Neptuno hoy", "credit": "" }
+        { "src": "assets/images/elizondo/1.png", "alt": "Cuadro que representa la Macroplaza", "credit": "cinesaurio.com — Historia del Elizondo" },
+        { "src": "assets/images/elizondo/2.jpg", "alt": "Fuente de Neptuno, Macroplaza", "credit": "cinesaurio.com — Historia del Elizondo" },
+        { "src": "assets/images/elizondo/3.webp", "alt": "Cine Elizondo visto desde la Calle Zaragoza (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
+        { "src": "assets/images/elizondo/4.png", "alt": "Interiores del Cine Elizondo (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
+        { "src": "assets/images/elizondo/5.png", "alt": "Interiores del Cine Elizondo (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
+        { "src": "assets/images/elizondo/fuente_neptuno_actual.jpg", "alt": "Fuente de Neptuno — hoy ocupa el predio del desaparecido Cine Elizondo", "credit": "Luis Alvaz · CC BY-SA 4.0 · Wikimedia Commons" }
       ],
-      "testimonio_archivo": "[POR LLENAR — guión doble: Elizondo + Rex]"
+      "testimonio_archivo": "[POR LLENAR — guión: Cine Elizondo]"
     },
     {
       "id": "marco",
-      "orden_global": 6,
+      "orden_global": 7,
       "acto": 3,
       "nombre": "MARCO — Museo de Arte Contemporáneo",
       "por_que_paramos": "[POR LLENAR — cierre del recorrido. Aquí se encuentra 'La ilusión' (2025), pieza de Margolles construida con el letrero del Antiguo Cine Monterrey]",
@@ -137,7 +161,8 @@
       "coords": { "lat": 25.6647, "lng": -100.3098 },
       "categoria_conceptual": "Punto de llegada",
       "imagenes": [
-        { "src": "assets/images/marco/exterior_01.jpg", "alt": "MARCO, fachada", "credit": "" },
+        { "src": "assets/images/marco/exterior_01.jpg", "alt": "MARCO — fachada del museo diseñado por Ricardo Legorreta", "credit": "Limbo@MX C · CC BY-SA 3.0 · Wikimedia Commons" },
+        { "src": "assets/images/marco/exterior_02.jpg", "alt": "MARCO — vista exterior con Cerro de la Silla al fondo", "credit": "Guillermo Sánchez Estrada · CC BY-SA 3.0 · Wikimedia Commons" },
         { "src": "assets/images/marco/la_ilusion.jpg", "alt": "Pieza 'La ilusión' (2025) de Teresa Margolles", "credit": "[Crédito museo / artista]" }
       ],
       "testimonio_archivo": "[POR LLENAR — opcional, podría ser nota sobre la pieza de Margolles]"
