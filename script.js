@@ -293,7 +293,7 @@
       testimoniosContainer.appendChild(div);
     });
     if (!hasTestimonios) {
-      document.getElementById('archivos').style.display = 'none';
+      testimoniosContainer.style.display = 'none';
     }
 
     // Mapa estático para impresión (Wikimedia Maps, sin API key)
