@@ -185,7 +185,7 @@
           </div>
           <div class="cuidado-block">
             <h3>Si alguien te pregunta</h3>
-            <p>Si alguien pregunta ¿para qué son las fotos? Responde que son para una colección digital que estará disponible en Wikimedia Commons.</p>
+            <p>Si alguien pregunta ¿para qué son las fotos? Responde que es para un foto tour del Museo de Arte Contemporáneo, es con fines de documentación y las fotos se publicarán en una plataforma abierta.</p>
           </div>
           <div class="cuidado-block">
             <h3>Marcas comerciales</h3>
@@ -204,6 +204,24 @@
       <div class="section-inner">
         <h2 class="section-title">Archivos Históricos</h2>
         <p class="section-desc">Fragmentos reconstruidos a partir de fuentes de archivo sobre cada parada.</p>
+        <div class="archivo-docs">
+          <details class="archivo-doc">
+            <summary class="archivo-doc-title">Incendio del Teatro Juárez, 1909 — Fuente: Archivo del Poder Judicial de Nuevo León</summary>
+            <div class="archivo-doc-content">
+              <object data="assets/docs/incendio_teatro_juarez_1909.pdf" type="application/pdf" class="archivo-pdf">
+                <p>Tu navegador no puede mostrar el PDF. <a href="assets/docs/incendio_teatro_juarez_1909.pdf" target="_blank" rel="noopener">Descárgalo aquí</a>.</p>
+              </object>
+            </div>
+          </details>
+          <details class="archivo-doc">
+            <summary class="archivo-doc-title">Último día del Cine Elizondo — Fuente: Hemeroteca de la Biblioteca Alfonsina UANL</summary>
+            <div class="archivo-doc-content">
+              <object data="assets/docs/ultimo_dia_cine_elizondo.pdf" type="application/pdf" class="archivo-pdf">
+                <p>Tu navegador no puede mostrar el PDF. <a href="assets/docs/ultimo_dia_cine_elizondo.pdf" target="_blank" rel="noopener">Descárgalo aquí</a>.</p>
+              </object>
+            </div>
+          </details>
+        </div>
         <div id="testimoniosContainer"></div>
       </div>
     </section>
@@ -272,7 +290,7 @@
               <p>Por cada foto, llena:</p>
               <ul class="paso-items">
                 <li><strong>Título</strong> (lo que se ve en la imagen, en una línea corta).</li>
-                <li><strong>Descripción</strong> (lo que anotaste en tu ficha de registro durante el taller: qué es, dónde estabas parada/o al disparar).</li>
+                <li><strong>Descripción</strong> (qué es, dónde estabas parada/o al disparar).</li>
                 <li><strong>Fecha</strong> (la del día del taller: 2 de mayo de 2026).</li>
                 <li><strong>Ubicación</strong> (puedes pegar las coordenadas o el nombre del cine).</li>
               </ul>
@@ -380,6 +398,17 @@
       </div>
       <div class="modal-body" id="modalBody"></div>
     </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightboxOverlay" hidden>
+    <button class="lightbox-close" aria-label="Cerrar imagen" id="lightboxClose">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+    <img id="lightboxImg" class="lightbox-img" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
   </div>
 
   <!-- Print-only: stop details rendered here by JS -->

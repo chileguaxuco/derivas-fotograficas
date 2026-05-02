@@ -37,8 +37,11 @@
       "por_que_paramos": "[POR LLENAR — texto del facilitador, ~60-80 palabras]",
       "descripcion_corta": "Cine emblemático de los años 80 con marquesina espectacular. Conocido por las leyendas urbanas de las 'Conchitas Encanto'.",
       "ano_fundacion": "1942 (inaugurado el 4 de diciembre)",
+      "pelicula_inauguracion": "El libro de la selva",
       "ano_abandono": "1980 (cierre) / 1990 (uso como bodega)",
       "estado_actual": "Fachada con letras originales aún visibles. Edificio abandonado.",
+      "aforo": "1,750 butacas",
+      "estilo_arquitectonico": "Streamline, diseñado por Luis Fernando Flores",
       "direccion": "Julián Villagrán esq. Isaac Garza, Centro, Monterrey",
       "coords": { "lat": 25.6815, "lng": -100.3223 },
       "categoria_conceptual": "Restos en pie",
@@ -54,9 +57,11 @@
       "nombre": "Cine Alameda",
       "por_que_paramos": "[POR LLENAR]",
       "descripcion_corta": "Cine que conforma con el Encanto una pareja de fachadas sobre Villagrán, a menos de una cuadra una de la otra.",
-      "ano_fundacion": "1937",
-      "ano_abandono": "Por verificar",
+      "ano_fundacion": "15 de septiembre de 1939",
+      "pelicula_inauguracion": "Thanks for everything y Los hijos Mandan",
+      "ano_abandono": "1980 (cierre) / 1990 (uso como bodega)",
       "estado_actual": "Queda solo la fachada.",
+      "aforo": "Desconocido",
       "direccion": "Julián Villagrán 515 nte., Centro, Monterrey",
       "coords": { "lat": 25.6811, "lng": -100.3222 },
       "categoria_conceptual": "Restos en pie",
@@ -73,9 +78,13 @@
       "nombre": "Cine Montoya",
       "por_que_paramos": "[POR LLENAR]",
       "descripcion_corta": "Primer cine en Monterrey con funciones en formato 70mm. La modernización tecnológica no salvó al edificio.",
-      "ano_fundacion": "1963",
+      "ano_fundacion": "1956 como teatro, 1963 como cine",
+      "pelicula_inauguracion": "El Cid (Anthony Mann)",
+      "ultima_pelicula": "Beethoven",
       "ano_abandono": "Cerrado al público en 1992",
       "estado_actual": "Queda la fachada.",
+      "aforo": "1,300 butacas",
+      "estilo_arquitectonico": "Streamline",
       "direccion": "Aramberri esq. Julián Villagrán, Centro, Monterrey",
       "coords": { "lat": 25.6771, "lng": -100.3229 },
       "categoria_conceptual": "Restos en pie",
@@ -92,15 +101,18 @@
       "por_que_paramos": "[POR LLENAR — punto ancla del taller. Mencionar el vínculo con la pieza 'La ilusión' de Margolles que se verá al final]",
       "descripcion_corta": "Cine más importante de su época con 4,650 butacas en 3 niveles. Inaugurado con 'Soy un prófugo' de Cantinflas. Diseño de Lisandro Peña Jr. y Arturo Olivero Cedeño.",
       "ano_fundacion": "1947 (19 de diciembre)",
-      "ano_abandono": "Cayó en desuso en los años 60, clausurado en los 90",
+      "pelicula_inauguracion": "Soy un prófugo",
+      "ano_abandono": "Cayó en desuso en los años 60, clausurado en 1992",
       "estado_actual": "Interior funciona como mercado. Fachada protegida por el INAH.",
+      "aforo": "4,650 butacas en 3 niveles: Luneta (2,200), Anfiteatro (1,300) y Balcón (gradas para 1,700)",
+      "estilo_arquitectonico": "Streamline",
+      "arquitecto": "Lisandro Peña Jr. y Arturo Olivero Cedeño",
       "direccion": "Aramberri esq. José Marroquín Leal, frente a la Alameda Mariano Escobedo, Centro, Monterrey",
       "coords": { "lat": 25.6768, "lng": -100.3204 },
       "categoria_conceptual": "Patrimonio en pie + Comunidad alrededor",
       "imagenes": [
-        { "src": "assets/images/cine_monterrey/historico_01.jpg", "alt": "Cine Monterrey en su época activa (archivo)", "credit": "[Fuente del archivo]" },
         { "src": "assets/images/cine_monterrey/actual_01.jpg", "alt": "Fachada hoy — Antiguo Cine Monterrey convertido en mercado popular", "credit": "LABNL / CONARTE · CC BY-SA 2.0 · Wikimedia Commons" },
-        { "src": "assets/images/cine_monterrey/mercado_01.jpg", "alt": "Interior funcionando como mercado", "credit": "" }
+        { "src": "assets/images/cine_monterrey/cine-reforma-monterrey-interiores.jpg", "alt": "Interiores del Antiguo Cine Monterrey", "credit": "Fuente: cinesaurio.com" }
       ],
       "testimonio_archivo": "[POR LLENAR]"
     },
@@ -110,8 +122,9 @@
       "acto": 2,
       "nombre": "Teatro Juárez — Tribunal Superior de Justicia",
       "por_que_paramos": "[POR LLENAR — aquí ocurrieron las primeras funciones públicas de cine en Monterrey (1898). Narrar las cuatro generaciones en un solo predio: Teatro Juárez → Teatro Independencia → Cine Rex → Cine Olympia / Cine Atenea]",
-      "descripcion_corta": "En este punto se llevaron a cabo las primeras funciones públicas de cine en Monterrey, en el Teatro Juárez. Cuatro generaciones de sala ocuparon el mismo predio durante 85 años: Teatro Juárez (1898–1909), Teatro Independencia (1910–1935), Cine Rex (1937–1971) y Cine Olympia / Cine Atenea (1971–1983). Todo fue demolido para la construcción de la Macroplaza.",
+      "descripcion_corta": "En este punto se llevaron a cabo las primeras funciones públicas de cine en Monterrey, en el Teatro Juárez. Cuatro generaciones de sala ocuparon el mismo predio durante 85 años: Teatro Juárez (1898–1909), Teatro Independencia (1910–1935), Cine Rex (1937–1971) y Cine Olympia / Cine Atenea (1972–1983). Todo fue demolido para la construcción de la Macroplaza.",
       "ano_fundacion": "Teatro Juárez: 1898 (primeras funciones de cine en Monterrey). Cine Rex: 1937 (28 ago)",
+      "ultima_pelicula": "Lo que el viento se llevó (5 de diciembre de 1982, Cine Olympia)",
       "ano_abandono": "Cine Olympia / Atenea: cierre y demolición 1983",
       "estado_actual": "Borrado del paisaje. En el predio se ubica ahora el Tribunal Superior de Justicia.",
       "direccion": "[POR LLENAR]",
@@ -119,9 +132,12 @@
       "categoria_conceptual": "Ausencia documentada — cuatro generaciones",
       "imagenes": [
         { "src": "assets/images/teatro_juarez/1.png", "alt": "Teatro Juárez (1898–1909) — primeras funciones públicas de cine en Monterrey", "credit": "Fuente: cinesaurio.com" },
-        { "src": "assets/images/teatro_juarez/2.png", "alt": "Teatro Independencia (1910–1935)", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/teatro_juarez/2.jpg", "alt": "Teatro Juárez, Nuevo León", "credit": "Fuente: Wikipedia" },
         { "src": "assets/images/teatro_juarez/3.png", "alt": "Cine Rex (1937–1971)", "credit": "Fuente: cinesaurio.com" },
-        { "src": "assets/images/teatro_juarez/4.png", "alt": "Cine Olympia / Cine Atenea (1971–1983)", "credit": "Fuente: cinesaurio.com" }
+        { "src": "assets/images/teatro_juarez/4.png", "alt": "Cine Olympia / Cine Atenea (1972–1983)", "credit": "Fuente: cinesaurio.com" },
+        { "src": "assets/images/teatro_juarez/5.png", "alt": "Cine Olympia — Fausto Tovar", "credit": "Fototeca Nuevo León-CONARTE © Fondo Fausto Tovar" },
+        { "src": "assets/images/teatro_juarez/6.png", "alt": "Teatro Independencia (1910–1935)", "credit": "" },
+        { "src": "assets/images/teatro_juarez/7.jpg", "alt": "Cine Olympia — demolición", "credit": "Fuente: cinesaurio.com" }
       ],
       "testimonio_archivo": "[POR LLENAR — narrar la sucesión de los cuatro teatros-cine en este predio]"
     },
@@ -133,8 +149,11 @@
       "por_que_paramos": "[POR LLENAR — narrar la ausencia: inaugurado 10 sept 1943 con 'China' (Loretta Young), con Cantinflas y Jorge Negrete en la sala. Buda en el muro sur, dragón dorado en el norte. Última función 2 nov 1981 con 'Cualquier travesura menos amor' (Clint Eastwood). Demolido por decreto del gobernador Martínez Domínguez, abril 1983. La Fuente de Neptuno marca el predio.]",
       "descripcion_corta": "Cine de ornamentación oriental diseñado por Enrique de la Mora y Palomar: un Buda de gran formato en el muro sur y un dragón dorado en el norte. Inaugurado el viernes 10 de septiembre de 1943 con la película 'China' (Loretta Young y Alan Ladd). En el acto inaugural estuvieron Cantinflas, Jorge Negrete y Domingo Soler. Última función: 2 de noviembre de 1981. Demolido en abril de 1983 por orden del gobernador Alfonso Martínez Domínguez para construir la Macroplaza. Su predio lo ocupa hoy la Fuente de Neptuno.",
       "ano_fundacion": "1943 (10 de septiembre, 8:45 PM). Construido sobre el predio del Teatro del Progreso (incendiado el 27 jun 1931).",
+      "pelicula_inauguracion": "China (John Farrow), con Loretta Young y Alan Ladd",
       "ano_abandono": "Última función: 2 nov 1981. Demolido: abril 1983.",
       "estado_actual": "Borrado del paisaje. En el predio se ubica la Fuente de Neptuno.",
+      "aforo": "1,792 espectadores",
+      "arquitecto": "Lisandro Peña Junior",
       "direccion": "Av. Zaragoza 833 Sur, entre Padre Mier y Mariano Matamoros, Macroplaza, Centro, Monterrey",
       "coords": { "lat": 25.6684, "lng": -100.3101 },
       "categoria_conceptual": "Ausencia documentada",
@@ -144,7 +163,7 @@
         { "src": "assets/images/elizondo/3.webp", "alt": "Cine Elizondo visto desde la Calle Zaragoza (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
         { "src": "assets/images/elizondo/4.png", "alt": "Interiores del Cine Elizondo (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
         { "src": "assets/images/elizondo/5.png", "alt": "Interiores del Cine Elizondo (archivo)", "credit": "cinesaurio.com — Historia del Elizondo" },
-        { "src": "assets/images/elizondo/fuente_neptuno_actual.jpg", "alt": "Fuente de Neptuno — hoy ocupa el predio del desaparecido Cine Elizondo", "credit": "Luis Alvaz · CC BY-SA 4.0 · Wikimedia Commons" }
+        { "src": "assets/images/elizondo/6.png", "alt": "Aparición fantasmagórica, temporal del Cine Elizondo en la Macroplaza (render)", "credit": "Bustani & Robledo, 2017. Procedencia: revista Contextual, contextual.mx" }
       ],
       "testimonio_archivo": "[POR LLENAR — guión: Cine Elizondo]"
     },
@@ -162,8 +181,7 @@
       "categoria_conceptual": "Punto de llegada",
       "imagenes": [
         { "src": "assets/images/marco/exterior_01.jpg", "alt": "MARCO — fachada del museo diseñado por Ricardo Legorreta", "credit": "Limbo@MX C · CC BY-SA 3.0 · Wikimedia Commons" },
-        { "src": "assets/images/marco/exterior_02.jpg", "alt": "MARCO — vista exterior con Cerro de la Silla al fondo", "credit": "Guillermo Sánchez Estrada · CC BY-SA 3.0 · Wikimedia Commons" },
-        { "src": "assets/images/marco/la_ilusion.jpg", "alt": "Pieza 'La ilusión' (2025) de Teresa Margolles", "credit": "[Crédito museo / artista]" }
+        { "src": "assets/images/marco/exterior_02.jpg", "alt": "MARCO — vista exterior con Cerro de la Silla al fondo", "credit": "Guillermo Sánchez Estrada · CC BY-SA 3.0 · Wikimedia Commons" }
       ],
       "testimonio_archivo": "[POR LLENAR — opcional, podría ser nota sobre la pieza de Margolles]"
     }

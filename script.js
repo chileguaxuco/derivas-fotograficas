@@ -69,6 +69,32 @@
 
   sections.forEach(function (s) { observer.observe(s); });
 
+  // --- Lightbox ---
+  var lightboxOverlay = document.getElementById('lightboxOverlay');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxCaption = document.getElementById('lightboxCaption');
+  var lightboxCloseBtn = document.getElementById('lightboxClose');
+
+  function openLightbox(src, alt, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightboxCaption.textContent = caption || '';
+    lightboxOverlay.hidden = false;
+  }
+
+  function closeLightbox() {
+    lightboxOverlay.hidden = true;
+    lightboxImg.src = '';
+  }
+
+  lightboxCloseBtn.addEventListener('click', closeLightbox);
+  lightboxOverlay.addEventListener('click', function (e) {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lightboxOverlay.hidden) closeLightbox();
+  });
+
   // --- Modal ---
   function openModal(stop, actoNum) {
     var actoLabel = 'Acto ' + actoNum + ' · Parada ' + stop.orden_global;
@@ -93,8 +119,13 @@
     // Meta
     var metaItems = [];
     if (!isPorLlenar(stop.ano_fundacion)) metaItems.push(['Año de inauguración', stop.ano_fundacion]);
+    if (!isPorLlenar(stop.pelicula_inauguracion)) metaItems.push(['Película de inauguración', stop.pelicula_inauguracion]);
+    if (!isPorLlenar(stop.ultima_pelicula)) metaItems.push(['Última película', stop.ultima_pelicula]);
     if (!isPorLlenar(stop.ano_abandono) && stop.ano_abandono !== '—') metaItems.push(['Año de abandono', stop.ano_abandono]);
     if (!isPorLlenar(stop.estado_actual)) metaItems.push(['Estado actual', stop.estado_actual]);
+    if (!isPorLlenar(stop.aforo)) metaItems.push(['Aforo', stop.aforo]);
+    if (!isPorLlenar(stop.estilo_arquitectonico)) metaItems.push(['Estilo arquitectónico', stop.estilo_arquitectonico]);
+    if (!isPorLlenar(stop.arquitecto)) metaItems.push(['Arquitecto', stop.arquitecto]);
     if (!isPorLlenar(stop.direccion)) metaItems.push(['Dirección', stop.direccion]);
 
     if (metaItems.length > 0) {
@@ -108,9 +139,9 @@
     // Images
     if (stop.imagenes && stop.imagenes.length > 0) {
       html += '<div class="modal-gallery" id="modalGallery">';
-      stop.imagenes.forEach(function (img) {
+      stop.imagenes.forEach(function (img, idx) {
         html += '<figure class="gallery-item">';
-        html += '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt || '') + '" loading="lazy" onerror="this.closest(\'figure\').remove()">';
+        html += '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt || '') + '" loading="lazy" data-lightbox-idx="' + idx + '" onerror="this.closest(\'figure\').remove()">';
         if (img.credit && !isPorLlenar(img.credit)) {
           html += '<figcaption>' + escHtml(img.credit) + '</figcaption>';
         }
@@ -120,6 +151,17 @@
     }
 
     modalBody.innerHTML = html;
+
+    // Bind lightbox clicks on gallery images
+    if (stop.imagenes && stop.imagenes.length > 0) {
+      modalBody.querySelectorAll('[data-lightbox-idx]').forEach(function (imgEl) {
+        imgEl.addEventListener('click', function () {
+          var idx = parseInt(imgEl.dataset.lightboxIdx);
+          var imgData = stop.imagenes[idx];
+          if (imgData) openLightbox(imgData.src, imgData.alt, imgData.credit);
+        });
+      });
+    }
     modalOverlay.hidden = false;
     document.body.style.overflow = 'hidden';
     modalClose.focus();
